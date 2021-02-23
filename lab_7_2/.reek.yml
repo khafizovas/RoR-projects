@@ -1,0 +1,28 @@
+---
+detectors:
+  IrresponsibleModule:
+    enabled: false
+  UtilityFunction:
+    enabled: false
+  FeatureEnvy:
+    enabled: false
+  TooManyStatements:
+    max_statements: 15
+  UncommunicativeParameterName:
+    accept:
+      - y
+      - x
+      - x1
+      - x2
+      - y1
+      - y2
+  UncommunicativeVariableName:
+    accept:
+      - y
+      - x
+      - x1
+      - x2
+      - y1
+      - y2
+  TooManyInstanceVariables:
+    max_instance_variables: 5

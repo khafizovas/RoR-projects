@@ -1,0 +1,20 @@
+Winter: <%= pluralize(params[:plant][0], 'time') %> per month<br/>
+Spring: <%= pluralize(params[:plant][1], 'time') %> per month<br/>
+Summer: <%= pluralize(params[:plant][2], 'time') %> per month<br/>
+Autumn: <%= pluralize(params[:plant][3], 'time') %> per month<br/><br/>
+
+Start:<br/>
+<%= form_with id: 'calc_watering_form', method: :get, url: logic_ajax_path do |form| %>
+  <%= form.hidden_field :winter, value: params[:plant][0] %>
+  <%= form.hidden_field :spring, value: params[:plant][1] %>
+  <%= form.hidden_field :summer, value: params[:plant][2] %>
+  <%= form.hidden_field :autumn, value: params[:plant][3] %>
+
+  <%= form.label t('.month') %>
+  <%= form.number_field :month, required: true, min: 1, max: 12, value: '1' %>
+  <%= form.label t('.year') %>
+  <%= form.number_field :year, required: true, min: 1, value: '2020' %><br/>
+  <%= form.submit t('.confirm') %>
+<% end %><br/>
+
+<div id="result_div"></div>

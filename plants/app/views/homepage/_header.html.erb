@@ -1,0 +1,61 @@
+<%# <nav> %>
+  <%# <img src="https://cdn.pixabay.com/photo/2019/12/14/06/25/cactus-4694281_960_720.png" height="150"> %>
+  <%# <%= link_to t('.title'), root_path %>
+  <%# <%= link_to 'English', root_path(locale: :en) %>
+  <%# <%= link_to 'Русский', root_path(locale: :ru) %>
+
+  <%# <% if user_signed_in? %>
+    <%# <%= link_to t('.my_plants'), plants_path %>
+    <%# <%= link_to t('.add_plant'), new_plant_path %>
+    <%# <%= link_to t('.edit_profile'), edit_user_registration_path %>
+    <%# <%= link_to t('.sign_out'), destroy_user_session_path, method: :delete %>
+
+  <%# <% else %>
+    <%# <%= link_to t('.sign_up'), new_user_registration_path %>
+    <%# <%= link_to t('.sign_in'), new_user_session_path %>
+  <%# <% end %>
+<%# </nav> %>
+
+<%#  %>
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <a class="navbar-brand" href="/">
+    <img src="https://cdn.pixabay.com/photo/2019/12/14/06/25/cactus-4694281_960_720.png" width="100" class="d-inline-block align-top" alt="">
+  </a>
+  
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <% if user_signed_in? %>
+        <li class="nav-item">
+          <a class="nav-link" href=<%= plants_path %>><%= t('.my_plants') %></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href=<%= new_plant_path %>><%= t('.add_plant') %></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href=<%= edit_user_registration_path %>><%= t('.edit_profile') %></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-method="delete" href=<%= destroy_user_session_path %>><%= t('.sign_out') %></a>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <a class="nav-link" href=<%= new_user_registration_path %>><%= t('.sign_up') %></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href=<%= new_user_session_path %>><%= t('.sign_in') %></a>
+        </li>
+      <% end %>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Change language
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href=<%= root_path(locale: :en) %>>English</a>
+          <a class="dropdown-item" href=<%= root_path(locale: :ru) %>>Русский</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,10 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+valid:
+  login: login1
+  #  asdf -- this is password
+  password_digest: $2a$12$r.tz8otar9M1qc1gntEbEukUjKMNX9Zwx3XllHNUEW.ADe28vVQvm
+
+invalid:
+  login: login2
+  password_digest: MyString

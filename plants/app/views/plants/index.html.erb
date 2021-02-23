@@ -1,0 +1,37 @@
+<h1><%= t('.your_plants') %></h1>
+
+<table class="table table-hover table-bordered">
+  <thead>
+    <tr>
+      <th scope="col"><%= t '.name' %></th>
+      <th scope="col"><%= t '.age' %></th>
+      <th scope="col"><%= t '.height' %></th>
+      <th scope="col"><%= t '.winter' %></th>
+      <th scope="col"><%= t '.spring' %></th>
+      <th scope="col"><%= t '.summer' %></th>
+      <th scope="col"><%= t '.autumn' %></th>
+      <th scope="col" colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @plants.each do |plant| %>
+      <tr scope="row">
+        <td><%= plant.name %></td>
+        <td><%= plant.age %></td>
+        <td><%= plant.height %></td>
+        <td><%= plant.winter_frequency %></td>
+        <td><%= plant.spring_frequency %></td>
+        <td><%= plant.summer_frequency %></td>
+        <td><%= plant.autumn_frequency %></td>
+        <td><%= link_to t('.calculate'), watering_path(:plant => [plant.winter_frequency, plant.spring_frequency,
+          plant.summer_frequency, plant.autumn_frequency]) %></td>
+        <td><%= link_to t('.show'), plant %></td>
+        <td><%= link_to t('.edit'), edit_plant_path(plant) %></td>
+        <td><%= link_to t('.destroy'), plant, method: :delete, data: { confirm: t('.are_you_sure') } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new_plant'), new_plant_path %>

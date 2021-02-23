@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dec: MyString
+  bin: MyString
+
+two:
+  dec: MyString
+  bin: MyString

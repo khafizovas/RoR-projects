@@ -1,0 +1,57 @@
+exec()
+
+function newCell(tag, text) {
+  cell = document.createElement(tag)
+  cell.textContent = text
+
+  return cell
+}
+
+function newRow(tag, str1, str2) {
+  let row = document.createElement("tr")
+
+  row.append(newCell(tag, str1))
+  row.append(newCell(tag, str2))
+
+  return row
+}
+
+function exec() {
+  result = document.getElementById("result_div")
+
+  old_result = result.firstChild
+  if (old_result !== null) {
+    old_result.remove()
+  }
+
+  <% if (defined? @error) %>
+    let error = "<%= @error %>"
+
+    let prgrph = document.createElement("p")
+    prgrph.setAttribute("id", "p_result");
+    prgrph.textContent = error
+
+    result.append(prgrph)
+  <% else %>
+    let res = <%== defined?(@result) ? @result : "''" %>
+    let tbl = document.createElement("table")
+    tbl.setAttribute("id", "tbl_result");
+
+    let tbl_caption = document.createElement("caption")
+    tbl_caption.textContent = 'Найденные палиндромы'
+    tbl.append(tbl_caption)
+
+    let thead_elem = document.createElement("thead")
+    thead_elem.append(newRow("th", "Десятичное число", "Двоичное число"))   
+
+    let tbody_elem = document.createElement("tbody")
+    for (let cur of res) {
+      tbody_elem.append(newRow("td", cur[0], cur[1]))
+    }
+
+    tbl.append(thead_elem)
+    tbl.append(tbody_elem)
+
+    result.append(tbl)
+  <% end %>
+}

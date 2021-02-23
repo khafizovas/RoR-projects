@@ -1,0 +1,37 @@
+exec();
+
+function exec() {
+  const months = ["", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+  $('#result_div').empty();
+
+  <% if (defined? @error) %>
+    let error = "<%= t('logic.calc_watering.calc_error') %>"
+    $('#result_div').append(`<p>${error}</p>`);
+  <% else %>
+    let res = <%= defined?(@result) ? @result : "''" %>
+    let res_table = $("<table>").attr('class', 'table table-bordered');
+
+    for (month of res) {
+      let new_row = $("<tr>").append(`<th scope="row">${months[month[0]]}</th>`);
+
+      for (let i = 1; i <= month[1]; ++i) {
+        let new_cell = $("<td>").append(i);
+
+        if (month[2].includes(i)) {
+          new_cell.css({'backgroundColor': '#FAE5D3'});
+        }
+        
+        new_row.append(new_cell);
+      }
+
+      if (month[1] < 31) {
+        $("<td>").attr('colspan', '31 - month[1]').appendTo(new_row);
+      }
+      
+      res_table.append(new_row);
+    }
+
+    $('#result_div').append(res_table);
+  <% end %>
+}

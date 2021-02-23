@@ -1,0 +1,23 @@
+<h2>Результат</h2>
+
+<% if (defined? @error) %>
+  <p><%= @error %></p>
+<% else %>
+  <table>
+    <caption>Найденные палиндромы</caption>
+    <thead>
+      <tr>
+        <th>Десятичное число</th>
+        <th>Двоичное число</th>
+      </tr>
+    </thead>
+    <% @result.each do |row| %>
+      <tr>
+        <td><%= row[:dec] %></td>
+        <td><%= row[:bin] %></td>
+      </tr>
+    <% end %>
+  </table>
+<% end %>
+
+<%= link_to "Назад", :palindromes_input %>

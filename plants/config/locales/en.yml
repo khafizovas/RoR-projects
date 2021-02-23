@@ -1,0 +1,93 @@
+en:
+  homepage:
+    header:
+      title: 'PlantsApp'
+      my_plants: 'My Plants'
+      add_plant: 'Add Plant'
+      edit_profile: 'Edit Profile'
+      sign_out: 'Sign Out'
+      sign_in: 'Sign In'
+      sign_up: 'Sign Up'
+    index:
+      not_authorized_welcome: 'You can Sign Up or Sign In by clicking the corresponding links in the header and then 
+      add necessary information for the further viewing and editing.'
+      authorized_welcome: 'Welcome! You have'
+      plant: 'plant'
+  plants:
+    form:
+      name: 'Name'
+      age: 'Age (months)'
+      height: 'Height (cm)'
+      winter: 'Winter watering (per month)'
+      spring: 'Spring watering (per month)'
+      summer: 'Summer watering (per month)'
+      autumn: 'Autumn watering (per month)'
+      confirm: 'Confirm'
+      error: 'error'
+      error_explanation: 'prohibited this plant from being saved:'
+    edit:
+      edit_plant: 'Editing plant'
+      show: 'Show'
+      back: 'Back'
+    index:
+      your_plants: 'Your plants'
+      name: 'Name'
+      age: 'Age (months)'
+      height: 'Height (cm)'
+      winter: 'Winter watering (per month)'
+      spring: 'Spring watering (per month)'
+      summer: 'Summer watering (per month)'
+      autumn: 'Autumn watering (per month)'
+      show: 'Show'
+      edit: 'Edit'
+      destroy: 'Destroy'
+      calculate: 'Calculate watering'
+      new_plant: 'New plant'
+      not_authorized_welcome: 'You can Sign Up or Sign In by clicking the corresponding links in the header and then 
+      add necessary information for the further viewing and editing.'
+      are_you_sure: 'Are you sure?'
+    new:
+      new_plant: 'New plant'
+      back: 'Back'
+    show:
+      name: 'Name'
+      age: 'Age (months)'
+      height: 'Height (cm)'
+      winter: 'Winter watering (per month)'
+      spring: 'Spring watering (per month)'
+      summer: 'Summer watering (per month)'
+      autumn: 'Autumn watering (per month)'
+      edit: 'Edit'
+      back: 'Back'
+  logic:
+    calc_watering:
+      year: 'Year'
+      month: 'Month'
+      day: 'Day'
+      confirm: 'Confirm'
+      calc_error: 'Argument error!'
+      watering_days: 'Watering days'
+      day: 'Day'
+  users:
+    sign_up:
+      sign_up: 'Sign up'
+    sign_in:
+      sign_in: 'Sign in'
+  
+  devise:
+    passwords:
+      new:
+        forgot: 'Forgot your password?'
+        send: 'Send me reset password instructions'
+    registrations:
+      new:
+        min: 'characters minimum'
+      edit:
+        edit_user: 'Edit User'
+        cancel: 'Cancel my account'
+        back: 'Back'
+        are_you_sure: 'Are you sure?'
+        update: 'Update'
+    shared:
+      _links:
+        log_in: 'Войти'

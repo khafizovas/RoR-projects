@@ -1,0 +1,37 @@
+<p>
+  <strong><%= t('.name') %></strong>
+  <%= @plant.name %>
+</p>
+
+<p>
+  <strong><%= t('.age') %></strong>
+  <%= @plant.age %>
+</p>
+
+<p>
+  <strong><%= t('.height') %></strong>
+  <%= @plant.height %>
+</p>
+
+<p>
+  <strong><%= t('.winter') %></strong>
+  <%= @plant.winter_frequency %>
+</p>
+
+<p>
+  <strong><%= t('.spring') %></strong>
+  <%= @plant.spring_frequency %>
+</p>
+
+<p>
+  <strong><%= t('.summer') %></strong>
+  <%= @plant.summer_frequency %>
+</p>
+
+<p>
+  <strong><%= t('.autumn') %></strong>
+  <%= @plant.autumn_frequency %>
+</p>
+
+<%= link_to t('.edit'), edit_plant_path(@plant) %> |
+<%= link_to t('.back'), plants_path %>

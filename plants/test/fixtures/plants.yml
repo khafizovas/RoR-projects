@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  user_id: 1
+  name: MyString
+  age: 11
+  height: 13
+  winter_frequency: 15
+  spring_frequency: 14
+  summer_frequency: 13
+  autumn_frequency: 12
+
+two:
+  id: 2
+  user_id: 1
+  name: MyString
+  age: 10
+  height: 9
+  winter_frequency: 5
+  spring_frequency: 4
+  summer_frequency: 1
+  autumn_frequency: 3

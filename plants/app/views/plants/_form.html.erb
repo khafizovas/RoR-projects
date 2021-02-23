@@ -1,0 +1,23 @@
+<%= simple_form_for @plant, defaults: { required: true }, local: true do |f| %>
+  <% if @plant.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@plant.errors.count, t('.error')) %> <%= t('.error_explanation') %> </h2>
+      <ul>
+        <% @plant.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.input :name, label: t('.name') %>
+  <%= f.input :age, input_html: { min: 0 }, label: t('.age') %>
+  <%= f.input :height, input_html: { min: 0 }, label: t('.height') %>
+
+  <%= f.input :winter_frequency, collection: 0..31, label: t('.winter') %>
+  <%= f.input :spring_frequency, collection: 0..31, label: t('.spring') %>
+  <%= f.input :summer_frequency, collection: 0..31, label: t('.summer') %>
+  <%= f.input :autumn_frequency, collection: 0..31, label: t('.autumn') %>
+  <%= f.button :submit %>
+  </div>
+<% end %>

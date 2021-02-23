@@ -1,0 +1,6 @@
+<h1><%= t('.edit_plant') %></h1>
+
+<%= render 'form', plant: @plant %>
+
+<%= link_to t('.show'), @plant %> |
+<%= link_to t('.back'), plants_path %>

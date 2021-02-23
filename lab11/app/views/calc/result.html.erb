@@ -1,0 +1,16 @@
+<h2>Палиндромы</h2>
+<table>
+  <thead>
+    <th>Dec</th>
+    <th>Bin</th>
+  </thead>
+  <tbody>
+  <% @result.each do |number| %>
+    <tr>
+      <td><%= number[:dec] %></td>
+      <td><%= number[:bin] %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+<%= link_to "Repeat calculation", :calc_index %>

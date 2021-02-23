@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  'n': 1
+  result: li1ei1ee
+
+two:
+  'n': 5
+  result: li0ei0ei1ei1ei3ei11ee

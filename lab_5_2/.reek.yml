@@ -1,0 +1,8 @@
+---
+detectors:
+  IrresponsibleModule:
+    enabled: false
+  UtilityFunction:
+    enabled: false
+  TooManyStatements:
+    max_statements: 15
